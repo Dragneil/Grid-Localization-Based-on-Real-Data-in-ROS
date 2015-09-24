@@ -1,0 +1,7 @@
+<launch>
+	<node name="rviz" pkg="rviz" type="rviz" args="$(find lab3)/launch/lab3.rviz" />
+   
+    <node name="local" pkg="lab3" type="read.py" >
+	<param name="bag_file" type="string" value="$(find lab3)/src/grid.bag" />
+    </node>
+</launch>
